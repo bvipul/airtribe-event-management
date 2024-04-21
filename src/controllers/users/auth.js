@@ -35,7 +35,7 @@ const usersAuthController = () => {
       password
     } = req.body;
 
-    const userExists = await UserService.getUserByEmail(email);
+    const userExists = await UserService.getByEmail(email);
 
     if (!userExists) {
       throw new ValidationError({

@@ -40,4 +40,6 @@ Object.keys(db).forEach(modelName => {
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 
+require("./scopes")(sequelize.models);
+
 module.exports = db;

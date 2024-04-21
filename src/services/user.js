@@ -34,7 +34,7 @@ module.exports = {
     return bcrypt.compare(password, userPassword);
   },
 
-  async getUserByEmail (email) {
+  async getByEmail (email) {
     const user = await User.findOne({
       where: {
         email
